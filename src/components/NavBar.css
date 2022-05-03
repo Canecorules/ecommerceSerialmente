@@ -1,0 +1,5 @@
+.bg-image{ 
+    height: 400px;
+    background-image: url(../components/Serialmente-3.jpg);
+    background-size: cover;
+}

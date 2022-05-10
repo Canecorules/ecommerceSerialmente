@@ -1,7 +1,6 @@
-// import {Container} from "react-bootstrap/Container"
-// import {Navbar} from "react-bootstrap/Navbar"
-// import {Button} from "react-bootstrap/Button"
-import {Button, Container, Navbar} from "react-bootstrap"
+import Container from "react-bootstrap/Container"
+import Navbar from "react-bootstrap/Navbar"
+import Button from "react-bootstrap/Button"
 import CartWidget from "../CartWidget/CartWidget"
 import "./NavBar.css"
 

@@ -1,15 +1,12 @@
-import ItemCount from "../ItemCount/ItemCount"
 
-function ItemListContainer({greeting}) {
-  
-  function carrito (count){
-    alert(`${count} items agregados al carrito`)
-  }
-  
+
+import ItemList from "../ItemList/ItemList"
+
+
+function ItemListContainer() {  
   return (
-    <div>
-        {greeting}
-        <ItemCount stock={5} initial={1} onAdd={carrito}/>        
+    <div>        
+        <ItemList />   
     </div>
   )
 }

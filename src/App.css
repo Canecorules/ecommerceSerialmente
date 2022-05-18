@@ -1,13 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Questrial&display=swap");
+
 
 html {
   scroll-behavior: smooth;
 }
 
-*{
-padding: 0;
-margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
+
 
 header {
   width: 100%;
@@ -39,7 +40,7 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  padding: 20px;
+  padding: 0 20px;
   letter-spacing: 1.5px;
 }
 

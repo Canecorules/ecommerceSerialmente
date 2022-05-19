@@ -8,6 +8,8 @@ import ItemDetailContainer from "./Container/ItemDetailContainer/ItemDetailConta
 import Cart from "./components/Cart/Cart";
 import HomeContent from "./components/HomeContent/HomeContent";
 
+
+
 function App() {
 
   return (
@@ -20,12 +22,13 @@ function App() {
           <Route path="/" element={<HomeContent />} />
           <Route path="/tienda" element={<ItemListContainer />} />
           <Route path="/tienda/:categoria" element={<ItemListContainer />} /> 
-          <Route path="/detalle" element={<ItemDetailContainer />} />
+          <Route path="/detalle/:detalleId" element={<ItemDetailContainer />} />
           <Route path="/carrito" element={<Cart />} />
 
           <Route path="/*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
+      
     </BrowserRouter>
   );
 }

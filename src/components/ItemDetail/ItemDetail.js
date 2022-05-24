@@ -2,17 +2,25 @@
 /* eslint-disable jsx-a11y/alt-text */
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
+import { useState } from "react";
+import InputCount from "../InputCount/InputCount";
+
 
 
 function ItemDetail({nombre,img,precio,stockDis}) {
 
-	
+const [inputType, setInputType] = useState("ItemCount");
+
+function handleInputType() {
+    setInputType("InputCount");
+}
+
 
 	function cart(count) {
 		alert(`${count} items agregados al carrito`);
-	  }
+	}
 
-  return (
+return (
 
 		<div className="cardDetail">
 			<div className="container-fliud">
@@ -46,10 +54,12 @@ function ItemDetail({nombre,img,precio,stockDis}) {
 								<span className="fa fa-star"></span>
 							</div>
 						</div>						
-						<h4 className="price">Precio: <span>{precio}</span></h4>
-						<div className="action">
-							<ItemCount stock={stockDis} initial={1} onAdd={cart} />
-						</div>
+						<h4 className="price">Precio: <span>{precio}</span></h4>						
+						{inputType === "ItemCount" ? (
+							<ItemCount stock={stockDis} initial={1} onAdd={cart} handleInputType={handleInputType} />
+							) : (
+							<InputCount />
+							)}						
 					</div>
 				</div>
 			</div>

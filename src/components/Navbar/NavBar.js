@@ -16,7 +16,9 @@ function NavBar(){
   <Link to={`/tienda/Historietas`}><Button variant="warning">Historietas</Button>{' '}</Link>
   <Link to={`/tienda/Articulos`}><Button variant="warning">Artículos</Button>{' '}</Link>    
   </Navbar.Collapse>
+  <Link to={`/carrito`}>
   <CartWidget/>
+  </Link> 
   </Container>
   
 </Navbar>

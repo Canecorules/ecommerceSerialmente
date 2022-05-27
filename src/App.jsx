@@ -7,12 +7,15 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ItemDetailContainer from "./Container/ItemDetailContainer/ItemDetailContainer";
 import Cart from "./components/Cart/Cart";
 import HomeContent from "./components/HomeContent/HomeContent";
+// import Footer from "./components/Footer/Footer";
+import CartContextProvider from "./Context/CartContext";
 
 
 
 function App() {
 
   return (
+  <CartContextProvider>
     <BrowserRouter>
       <div>
 
@@ -27,9 +30,10 @@ function App() {
 
           <Route path="/*" element={<Navigate to="/" replace />} />
         </Routes>
-      </div>
-      
+        {/* <Footer/> */}
+      </div>            
     </BrowserRouter>
+  </CartContextProvider>  
   );
 }
 

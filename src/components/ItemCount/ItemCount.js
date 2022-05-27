@@ -3,7 +3,7 @@ import { FaPlus, FaMinus } from 'react-icons/fa';
 import "./ItemCount.css"
 
 
-export default function ItemCount ({stock, initial, onAdd, handleInputType }) {
+export default function ItemCount ({stock, initial, onAdd}) {
     const [count, setCount]= useState(initial)
 
     function sumar() {
@@ -28,7 +28,7 @@ export default function ItemCount ({stock, initial, onAdd, handleInputType }) {
                 <button className="boton" onClick={sumar}> <FaPlus/></button>        
             </div>        
             <div className="containerBotonCarrito">        
-                <button className="cta" onClick={handleInputType}>
+                <button className="cta" onClick={()=>onAdd(count)}>
                     <span className="hover-underline-animation"> Añadir al Carrito </span>
                     <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 46 16">
                         <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>

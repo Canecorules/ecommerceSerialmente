@@ -16,7 +16,7 @@ function CartContextProvider({ children }) {
 
     if (indice !== -1) { 
       const cantidadVieja = cartList[indice].quantity;
-      cartList[indice].quantity +=cantidadVieja
+      cartList[indice].quantity =cantidadVieja+item.quantity
       setcartList([...cartList])
    
     } else {

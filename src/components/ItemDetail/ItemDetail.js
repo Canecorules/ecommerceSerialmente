@@ -7,7 +7,7 @@ import { useContext, useState } from "react";
 import { CartContext } from "../../Context/CartContext";
 
 
-function ItemDetail({ product,onAdd, stockDis}) {
+function ItemDetail({ product,onAdd}) {
   
 	const [inputType, setInputType] = useState("ItemCount");
 	

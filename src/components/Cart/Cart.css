@@ -1,3 +1,10 @@
+.containerChangeButton {
+    display: flex;
+}
+
+
+
+
 .botonesOpciones {
     display: inline-block;
     padding: 10px 10px;
@@ -78,10 +85,12 @@
     flex-direction: row;
     align-items: flex-start;
     width: 100%;
+    height: 100%;
     margin-top: 35px;
-    justify-content: space-around;
+    justify-content: space-evenly;
     font-family: 'Questrial', sans-serif;
     font-weight: bold;
+    /* background-color: darkolivegreen; */
 
 }
 
@@ -109,21 +118,35 @@
     padding: 10px;
     margin-bottom: 20px;
     font-weight: bold;
+    letter-spacing: 1.5px;
+    transition: ease-in-out 0.4s;
+
+}
+
+.botonVaciarCarrito:hover {
+    letter-spacing: 4px;
+}
+
+.contenedorResumenFormulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
 }
 
 
-
 .contenedorResumenCompra {
-    width: 30%;
-    height: 300px;
+    width: 100%;
     display: flex;
     flex-direction: column;
 
 }
 
-.tituloDetalleCompra {
+.tituloDetalleCompra p {
     display: flex;
     justify-content: center;
+    margin-bottom: 0;
 }
 
 
@@ -132,22 +155,28 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-content: space-around;
+    /* background-color: coral; */
 }
 
 
 
-.botonFinalizarCompra {
-    background-color: black;
-    color: white;
-    border-radius: 7px;
-    padding: 10px;
-    border: none;
-    margin-top: 15px;
-}
 
 .spacing {
     letter-spacing: 1.5px;
+    margin: 0;
+}
+
+
+
+.contenedorCarritoVacio1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(8, 8, 8);
+
 }
 
 
@@ -157,30 +186,43 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
+    height: 100%;
+    background-color: rgb(8, 8, 8);
+
+
 }
 
 
 .textoCarritoVacio {
 
     font-family: 'Questrial', sans-serif;
+    font-size: 17px;
     letter-spacing: 4px;
-    margin-top: 50px;
-
-
+    color: white;
+    padding-bottom: 10px;
 }
+
 
 
 .botonCartIrTienda {
 
     background-color: transparent;
+    border: white solid 1.5px;
     border-radius: 7px;
     padding: 10px;
     margin-bottom: 20px;
-    font-weight: bold;
     text-decoration: none;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    letter-spacing: 2px;
+
+
 
 }
 
+.animate__animated {
+    color: white;
+}
 
 
 
@@ -245,4 +287,110 @@
 
 .botonEliminar:active .icon svg {
     transform: scale(0.8);
+}
+
+
+@media screen and (max-width: 1010px) {
+
+    .contenedorCart {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        margin-top: 35px;
+        justify-content: space-evenly;
+        font-family: 'Questrial', sans-serif;
+        font-weight: bold;
+
+    }
+
+    .contenedorProductosCart {
+        width: 100%;
+
+    }
+
+    .contenedorResumenFormulario {
+
+        width: 100%;
+    }
+
+    .contenedorResumenFormulario .tituloDetalleCompra {
+
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .contenedorResumenFormulario .textOrder {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        padding: 15px;
+        font-size: 17px;
+    }
+
+  
+
+}
+
+@media screen and (max-width: 768px){
+
+    .botonEliminar {
+        width: 2.4em;
+        margin: 0;
+    }
+
+    .botonEliminar .text {
+        display: none;
+        margin: 0;
+    }
+
+    .botonEliminar .icon {
+      display: none;
+
+    } 
+
+    .tableMediaQuery{
+        background-color: darkorange;
+        font-size: 13px;
+
+    }
+
+    .titulosTabla {
+        font-size: 13px;
+
+    }
+
+}
+
+@media screen and (max-width: 440px){
+
+    .titulosTabla {
+        font-size: 10px;
+
+    }
+
+
+    .tableMediaQuery{
+        font-size: 10px;
+    }
+
+    .botonEliminar {
+        width: 2.9em;
+        height: 2.9em;
+        margin: 0;
+    }
+    
+}
+
+@media screen and (max-width: 360px){
+    
+
+    .tableMediaQuery{
+        font-size: 8px;
+    }
+
+
 }

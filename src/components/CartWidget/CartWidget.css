@@ -1,5 +1,6 @@
 .cart{
     color: black;
+    list-style: none;
 }
 
 .cart:hover{

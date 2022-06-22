@@ -2,10 +2,11 @@
 import { useContext, useState} from "react";
 import { CartContext } from "../../Context/CartContext";
 import { NavLink } from "react-router-dom"
+import Form from "react-bootstrap/Form";
+
+
 import "./Cart.css";
-import { ImHeartBroken} from "react-icons/im";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
-import CartModal from "../CartModal/CartModal";
 
 
 // FUNCION PARA SUBIR TODOS LOS PRODUCTOS A FIREBASE
@@ -39,7 +40,6 @@ function Cart() {
     vaciarCarrito,
     eliminarUnProducto,
     precioTotal,
-    cantidadTotal,
   } = useContext(CartContext);
 
   // ORDEN DE COMPRA HARDCODE
@@ -77,30 +77,43 @@ function Cart() {
       <div className="contenedorProductosCart">
         <div>
           <table className="table tableMediaQuery">
-            <thead className="spacing titulosTabla">
+            <thead className="titulosTabla">
+
               <tr>
-                <th scope="col">PRODUCTO</th>
-                <th scope="col">NOMBRE</th>
-                <th scope="col">PRECIO</th>
+                <th scope="col">PORTADA</th>
+                <th scope="col">TÍTULO</th>
+                <th scope="col">VALOR</th>
                 <th scope="col">CANTIDAD</th>
                 <th scope="col">ELIMINAR</th>
               </tr>
+
             </thead>
+            
             <tbody className="tableBody">
               {cartList.map((producto) => (
                 <tr key={producto.id}>
                   <th scope="row">
                     <img className="imgCart" src={producto.img} alt="" />
                   </th>
-                
                   <td>{producto.nombre}</td>
+<<<<<<< HEAD
                   <td>{producto.precio}</td>
                   <td>{producto.quantity}</td>                 
+=======
+                  <td>${producto.precio}</td>
+                  <td>{producto.quantity}</td>
+                 
+>>>>>>> 7f61a161888c846e1b4413503e88a4d72f4e17f8
                   <td>
                     <button
                       class="noselect botonEliminar"
                       onClick={() => eliminarUnProducto(producto.id)}
+<<<<<<< HEAD
                     >                      
+=======
+                    >
+                     X
+>>>>>>> 7f61a161888c846e1b4413503e88a4d72f4e17f8
                     </button>
                   </td>
                 </tr>
@@ -108,71 +121,71 @@ function Cart() {
             </tbody>
           </table>
         </div>
-        <div>
+
+        <div className="footerCart">
+
+        <div className="containerBotonVaciarCarrito">
           <button
-            className="botonVaciarCarrito spacing"
+            className="botonVaciarCarrito"
             onClick={vaciarCarrito}
           >
-            Vaciar carrito
+           VACIAR CARRITO
           </button>
+
+          </div>
+          <p className="total"> TOTAL: ${precioTotal() !== 0 && precioTotal()}</p>
         </div>
-      </div>
 
-      {/* RESUMEN DE COMPRA */}
 
-      <div className="contenedorResumenFormulario">
-        <div className="contenedorResumenCompra">
-          <table className="table detalleCompra">
-            <thead>
-              <th className="tituloDetalleCompra spacing" scope="col">
-                <p>DETALLE DE COMPRA</p>{" "}
-              </th>
-            </thead>
-            <tbody className="textOrder">
-              <td>
-                <p className="spacing">
-                  Cantidad de productos:
-                  {cantidadTotal() !== 0 && cantidadTotal()}
-                </p>
-                <p className="spacing">
-                  TOTAL: US${precioTotal() !== 0 && precioTotal()}
-                </p>
-              </td>
-            </tbody>
-          </table>
+         <div className="contenedorForm">
+         <Form>
+         <Form.Group className="mb-3" controlId="formBasicEmail">
+    <Form.Label>NOMBRE COMPLETO</Form.Label>
+    <Form.Control type="text" placeholder="ingrese su nombre completo" />
+  </Form.Group>
 
-          <button onClick={generateOrder}>Enviar orden de compra!</button>
+           <Form.Group className="mb-3" controlId="formBasicEmail">
+    <Form.Label>DOMICILIO</Form.Label>
+    <Form.Control type="text" placeholder="ingrese su nombre completo" />
+  </Form.Group>
 
-          <CartModal
-            className="botonFinalizarCompra spacing"
-            show={show}
-            handleShow={handleShow}
-            handleClose={handleClose}
-            fullscreen={fullscreen}
-          />
+
+  <Form.Group className="mb-3" controlId="formBasicEmail">
+    <Form.Label>EMAIL</Form.Label>
+    <Form.Control type="email" placeholder="Ingrese su email" />
+  </Form.Group>
+
+  <Form.Group className="mb-3" controlId="formBasicEmail">
+    <Form.Label>REPITA EMAIL</Form.Label>
+    <Form.Control type="email" placeholder="Ingrese su email" />
+  </Form.Group>
+
+<div className="containerButtonFinish">
+<button className="buttonFinish" onClick={generateOrder}>TERMINAR COMPRA</button>
+</div>
+</Form>
         </div>
       </div>
     </div>
   ) : (
     <div className="contenedorCarritoVacio1">
-      <div className="contenedorCarritoVacio animate__animated animate__zoomIn animate__slow">
-        <h2 className="textoCarritoVacio ">SU CARRITO ESTA VACIO </h2>
-
+      <div className="contenedorCarritoVacio">
+        <h2 className="textoCarritoVacio ">CARRITO VACÍO</h2>
         <NavLink
           activeclassname="currentCategory"
           className="text-white"
           to={"/tienda"}
         >
-          <button className="botonCartIrTienda">IR A LA TIENDA </button>
+          <button className="botonCartIrTienda">VOLVER A LA TIENDA</button>
         </NavLink>
-        <ImHeartBroken
-          className="animate__animated animate__swing animate__slower animate__infinite 	"
-          size={50}
-        />
       </div>
-      {/* <button onClick={()=>addDocsFb()}> traer datos </button> */}
     </div>
   );
 }
 
 export default Cart;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7f61a161888c846e1b4413503e88a4d72f4e17f8

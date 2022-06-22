@@ -1,60 +1,48 @@
-.loader {
+
+
+
+/* From uiverse.io by @gagan-gv */
+.load {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    transform: scale(2);
+    border: 0 solid transparent;
     border-radius: 50%;
-    border: 1px solid;
-    width: 30px;
-    height: 30px;
-    color: black;
-}
-
-.loader::after {
-    position: absolute;
-    width: 0px;
-    height: 10px;
-    display: block;
-    border-left: 1px solid black;
+    width: 100px;
+    height: 100px;
+   }
+   
+   .load::before,
+   .load::after {
     content: '';
-    left: 14px;
-    border-radius: 1px;
-    top: 4px;
-    animation-duration: 1s;
-}
-
-.loader::before {
+    border: 7px solid rgb(150, 4, 4);
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
     position: absolute;
-    width: 0px;
-    height: 10px;
-    display: block;
-    border-left: 1px solid black;
-    content: '';
-    left: 14px;
-    border-radius: 1px;
-    top: 4px;
-    animation-duration: 40s;
-}
-
-.loader::before,
-.loader::after {
-    transform-origin: bottom;
-    animation-name: dial;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-@keyframes dial {
+    animation: loader 2s linear infinite;
+    opacity: 0;
+   }
+   
+   /* .load::before {
+    animation-delay: 0.1s;
+   } */
+   
+   @keyframes loader {
     0% {
-        transform: rotate(0deg);
+     transform: scale(1);
+     opacity: 0;
     }
-
+   
+    50% {
+     opacity: 1;
+    }
+   
     100% {
-        transform: rotate(360deg);
+     transform: scale(0);
+     opacity: 0;
     }
-}
-
+   }
 
 /* From uiverse.io by @Jedi-hongbin */
 .buttonVolver {

@@ -1,55 +1,67 @@
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Questrial&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Jost:wght@300&family=Questrial&family=Rubik+Moonrocks&family=Secular+One&display=swap');
 
-
-h3 {
-    font-size: 15px;
-    font-weight: bold;
-    color: black;
-}
 
 .containerContadorTodo {
-    font-family: 'Questrial', sans-serif;
-    /* background-color: #9F3E42; */
+    font-family: 'Jost', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
-    width: 100%;
+    width: 80%;
     padding: 20px 0 0 0;
     border-radius: 10px;
+}
+
+.containerStockContador{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 
 }
 
 .containerContador {
-
     display: flex;
     justify-content: space-around;
     align-content: center;
     align-items: center;
-    width: 80%;
+    width: 30%;
     padding: 20px;
 }
 
-.containerBotonCarrito {
-    /* background-color: rgb(128, 36, 151); */
-    padding: 10px;
+.containerStock{
     display: flex;
+    width: 40%;
     justify-content: center;
+    align-items: center;
 }
 
 .boton {
     padding: 5px;
     border: none;
-    font-family: 'Questrial', sans-serif;
-    font-size: 14px;
+    background-color: transparent;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;  
 }
 
-.botonCarrito {
-    padding: 7px 15px;
+.containerBtnCarrito{
+    background-color: black;
     border-radius: 5px;
+
+}
+
+.botonAgregarCarrito:hover{
+    background-color: rgb(146, 9, 9);
+    border-radius: 5px;
+
+}
+
+.botonAgregarCarrito {
+    padding: 7px 15px;
     border: none;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 20px;
+    background-color: transparent;
+    background-color: black;
+    color: white;
 }
 
 .numero {
@@ -61,56 +73,4 @@ h3 {
     height: 27px;
     font-weight: bold;
     margin-bottom: 0;
-}
-
-.cta {
-    border: none;
-    background: none;
-}
-
-.cta span {
-    font-family: 'Questrial', sans-serif;
-    padding-bottom: 7px;
-    font-size: 12px;
-    font-weight: bold;
-    padding-right: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.cta svg {
-    transform: translateX(-8px);
-    transition: all 0.3s ease;
-}
-
-.cta:hover svg {
-    transform: translateX(0);
-}
-
-.cta:active svg {
-    transform: scale(0.9);
-}
-
-.hover-underline-animation {
-    position: relative;
-    color: black;
-    padding-bottom: 20px;
-}
-
-.hover-underline-animation:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    /* height: 1.5px; */
-    bottom: 0;
-    left: 0;
-    background-color: #000000;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-.cta:hover .hover-underline-animation:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
 }

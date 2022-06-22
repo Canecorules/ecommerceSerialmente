@@ -21,19 +21,20 @@ export default function ItemCount ({stock, initial, onAdd}) {
 
     return (
         <div className="containerContadorTodo">
-            <h3>Stock disponible: {stock}</h3>        
+            <div className="containerStockContador">
+            <div className="containerStock"><h3>Stock disponible: {stock}</h3>   </div>
+               
             <div className="containerContador">        
                 <button className="boton" onClick={restar}> <FaMinus/></button>        
                 <p className="numero">{count}</p>        
                 <button className="boton" onClick={sumar}> <FaPlus/></button>        
-            </div>        
+            </div>  
+
+            </div>
             <div className="containerBotonCarrito">        
-                <button className="cta" onClick={()=>onAdd(count)}>
-                    <span className="hover-underline-animation"> Añadir al Carrito </span>
-                    <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 46 16">
-                        <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>
-                    </svg>
-                    </button>        
+                <button className="botonAgregarCarrito" onClick={()=>onAdd(count)}>
+                     Agregar al Carrito
+                </button>        
             </div>        
         </div>  
         )        

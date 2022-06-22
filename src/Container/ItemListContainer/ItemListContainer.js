@@ -60,7 +60,7 @@ function ItemListContainer() {
    return (
     <div>
       {loading ? (
-        <div className="loader"></div>
+        <div className="load"></div>
       ) : (
         <>
           {categoria && (

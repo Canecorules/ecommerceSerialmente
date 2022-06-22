@@ -1,39 +1,39 @@
-<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=League+Gothic&family=Manrope&family=Poppins:wght@500&display=swap');
 
-.buttonHome{
-    z-index: 101;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border:none;
-    padding: 50px 80px;
-    text-decoration: none;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.526);
-    background: rgba(255, 255, 255, 0.35);
-    box-shadow:inset 6px 6px 12px #fde039be,
-    inset -6px -6px 12px #fde039be;
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
-    font-family: 'Questrial', sans-serif;
-    font-weight: bold;
-    letter-spacing: 3px;
-    transition:  ease-in-out 0.5s
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
 }
 
-.buttonHome:hover{
-    color: black;
-    box-shadow: inset 500px 0 0 0 #fde0397b;
-  
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
+.inputName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    width: 70%;
+    margin-left: 4em;
+}
 
+.inputMail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    width: 70%;
+    margin-left: 4em;
+}
 
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+    width: 70%;
 
 }
-=======
 
-
->>>>>>> 7f61a161888c846e1b4413503e88a4d72f4e17f8

@@ -1,76 +1,22 @@
 
-import { useContext, useState} from "react";
+import { useContext} from "react";
 import { CartContext } from "../../Context/CartContext";
 import { NavLink } from "react-router-dom"
-import Form from "react-bootstrap/Form";
+
 
 
 import "./Cart.css";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
-
-
-// FUNCION PARA SUBIR TODOS LOS PRODUCTOS A FIREBASE
-
-// function addDocsFb(){
-//   libros.forEach((testItem) => {
-//   const db = getFirestore();
-
-//   const queryCollection = collection(db, "productos");
-
-//   addDoc(queryCollection, testItem)
-//   .then((resp)=> console.log(resp))
-// });}
+import Formulario from "../Form/Form";
 
 
 function Cart() {
-
-  const [show, setShow] = useState(false);
-
-  const [fullscreen, setFullscreen] = useState(true);
-
-  const handleClose = () => setShow(false);
-
-  function handleShow(breakpoint) {
-    setFullscreen(breakpoint);
-    setShow(true);
-  }
 
   const {
     cartList,
     vaciarCarrito,
     eliminarUnProducto,
     precioTotal,
-  } = useContext(CartContext);
-
-  // ORDEN DE COMPRA HARDCODE
-
-  const generateOrder = () => {
-
-    let order = {};
-    order.buyer = {
-      name: "Daniel",
-      email: "dcamelo1@hotmail.com",
-      phone: "3186933889",
-    };
-    
-    order.total= precioTotal();
-    order.productos = 
-    cartList.map
-    ((cartProduct) => {
-      const id = cartProduct.id;
-      const name = cartProduct.nombre;
-      const price = cartProduct.precio * cartProduct.quantity;
-
-      return { id, name, price };
-    }); 
-
-    const db = getFirestore();
-    const queryCollection = collection(db, "Orden de compra");
-    addDoc(queryCollection, order)
-      .then((resp) => console.log(resp))
-      .catch((err) => console.log(err))
-      .finally(() => vaciarCarrito()); 
-  }
+  } = useContext(CartContext);    
 
   return cartList.length ? (
     <div className="contenedorCart">
@@ -96,24 +42,14 @@ function Cart() {
                     <img className="imgCart" src={producto.img} alt="" />
                   </th>
                   <td>{producto.nombre}</td>
-<<<<<<< HEAD
-                  <td>{producto.precio}</td>
-                  <td>{producto.quantity}</td>                 
-=======
                   <td>${producto.precio}</td>
                   <td>{producto.quantity}</td>
                  
->>>>>>> 7f61a161888c846e1b4413503e88a4d72f4e17f8
                   <td>
                     <button
                       class="noselect botonEliminar"
                       onClick={() => eliminarUnProducto(producto.id)}
-<<<<<<< HEAD
-                    >                      
-=======
-                    >
-                     X
->>>>>>> 7f61a161888c846e1b4413503e88a4d72f4e17f8
+                    > X                    
                     </button>
                   </td>
                 </tr>
@@ -135,36 +71,7 @@ function Cart() {
           </div>
           <p className="total"> TOTAL: ${precioTotal() !== 0 && precioTotal()}</p>
         </div>
-
-
-         <div className="contenedorForm">
-         <Form>
-         <Form.Group className="mb-3" controlId="formBasicEmail">
-    <Form.Label>NOMBRE COMPLETO</Form.Label>
-    <Form.Control type="text" placeholder="ingrese su nombre completo" />
-  </Form.Group>
-
-           <Form.Group className="mb-3" controlId="formBasicEmail">
-    <Form.Label>DOMICILIO</Form.Label>
-    <Form.Control type="text" placeholder="ingrese su nombre completo" />
-  </Form.Group>
-
-
-  <Form.Group className="mb-3" controlId="formBasicEmail">
-    <Form.Label>EMAIL</Form.Label>
-    <Form.Control type="email" placeholder="Ingrese su email" />
-  </Form.Group>
-
-  <Form.Group className="mb-3" controlId="formBasicEmail">
-    <Form.Label>REPITA EMAIL</Form.Label>
-    <Form.Control type="email" placeholder="Ingrese su email" />
-  </Form.Group>
-
-<div className="containerButtonFinish">
-<button className="buttonFinish" onClick={generateOrder}>TERMINAR COMPRA</button>
-</div>
-</Form>
-        </div>
+      <Formulario/>
       </div>
     </div>
   ) : (
@@ -184,8 +91,5 @@ function Cart() {
 }
 
 export default Cart;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 7f61a161888c846e1b4413503e88a4d72f4e17f8

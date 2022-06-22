@@ -27,7 +27,6 @@ function App() {
             <Route path="/tienda/:categoria" element={<ItemListContainer />} />
             <Route path="/detalle/:detalleId" element={<ItemDetailContainer />} />
             <Route path="/carrito" element={<Cart />} />
-
             <Route path="/*" element={<Navigate to="/" replace />} />
           </Routes>
           {/* <Footer/> */}

@@ -45,3 +45,4 @@ function CartModal({ show, handleShow, handleClose, fullscreen }) {
 }
 
 export default CartModal;
+

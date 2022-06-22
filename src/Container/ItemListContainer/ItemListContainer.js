@@ -1,5 +1,3 @@
-
-
 import ItemList from "../../components/ItemList/ItemList"
 import "./ItemListContainer.css";
 import { useEffect, useState } from "react";

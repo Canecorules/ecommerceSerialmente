@@ -5,8 +5,6 @@ import { useContext, useState } from "react";
 import { CartContext } from "../../Context/CartContext";
 
 
-
-
 function CartWidget(){
 
   const {cantidadTotal } =

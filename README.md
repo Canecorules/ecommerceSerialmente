@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+ZETAELE ART-BOOKS es una app creada por Zoe Lanz que simula un e-commerce de libros de arte de la marca taschen. Proyecto creado con fines educativos para el curso de REACT JS de coder house.
+PREVIEW
+preview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+INICIO
+Portada de presentacion para entrar al "e-commerce".
+PÁGINA
+La página agrupa los productos en base a las siguientes categorías:
+▸ MODA
+▸FOTOGRAFÍA
+▸ARTE
+▸ARQUITECTURA & DISEÑO
+CARRITO
+El carrito cuenta con un icono que pertenece al carrito donde se agrupan los libros seleccionados para "comprar". Allí mismo se ven los detalles de cada libro elegido: imagen, nombre, precio, cantidad. Permite eliminar por producto o vaciar el carrito.Tambien incluye un detalle de compra donde se puede observar la cantidad total de libros seleccionados y el precio total a "pagar".
+FORMULARIO:
+Luego de clickear en finalizar compra se abrira un formulario donde el usuario tendra que completar sus datos. Si estos estan todos correctos se enviara la orden de compra. El carrito es persistente y al "comprar" va disminuyendo el stock disponible.
+LIBRERÍAS
+▸ ANIMATE CSS > ^4.1.1: Libreria utilizada para animar el cart cuando esta vacío.
+▸ REACT-BOOTSTRAP > ^2.3.1: Bootstrap es un framework de CSS y JS utilizado para la maquetacion web.
+▸ FIREBASE > ^9.8.1:Firebase es un servicio de base de datos en la nube de Google y lo utilice para guardar los productos y ordenes de compra.
+▸ REACT-ICONS > ^4.3.1: Es una libreria de iconos. Utilizada en el cartWidget y en el cart.
+▸ REACT-ROUTER-DOM > ^6.3.0: Librería que facilita la navegacion, utilizada para generar un correcto flow de navegación.
+▸ REACT-TOASTIFY > ^9.0.4: Librería para la creacion y diseño de alertas. Utilizada en el cart al finalizar la "compra".
+FOOTER
+PODRÁN ENCONTRAR UN BOTON QUE LLEVA DIRECTO A GITHUB, LINKEDIN Y MAIL.
+DEPLOY
+https://zetaele-art-books.netlify.app/
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+CONTACTO
+▸GITHUB
+▸LINKEDIN

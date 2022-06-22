@@ -30,5 +30,3 @@ function InputCount() {
 }
 
 export default InputCount
-
-

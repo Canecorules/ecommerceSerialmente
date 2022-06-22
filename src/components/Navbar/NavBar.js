@@ -14,22 +14,22 @@ function NavBar(){
   useContext(CartContext);
 
     return(
-      <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark">
-  <Container>
-  <Link to="/"><Navbar.Brand>Tienda Serialmente</Navbar.Brand></Link>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">    
-  <Link to={`/tienda/Libros`}><Button variant="warning">Libros</Button>{' '}</Link>
-  <Link to={`/tienda/Historietas`}><Button variant="warning">Historietas</Button>{' '}</Link>
-  <Link to={`/tienda/Articulos`}><Button variant="warning">Artículos</Button>{' '}</Link>    
-  </Navbar.Collapse>
-  <Link to={`/carrito`}>
-  <CartWidget/>
-  </Link> 
-  </Container>
-  
-</Navbar>
-    )
-}
+      <Navbar className="containerNav" collapseOnSelect expand="lg" >
+      <Container>
+      <Link to="/"><Navbar.Brand className="logo animate__animated animate__flash animate__slow animate__delay-2s animate__repeat-3">SERIALMENTE</Navbar.Brand></Link>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">    
+      <Link  to={`/tienda/Libros`}><Button >LIBROS</Button></Link>
+      <Link to={`/tienda/Historietas`}><Button >HISTORIETAS</Button></Link>
+      <Link  to={`/tienda/Articulos`}><Button >ARTÍCULOS</Button></Link>    
+      </Navbar.Collapse>
+      <Link to={`/carrito`}>
+      <CartWidget/>
+      </Link> 
+      </Container>
+      
+    </Navbar>
+        )
+    }
 
 export default NavBar

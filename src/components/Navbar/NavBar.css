@@ -1,3 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Jost:wght@300&family=Questrial&family=Rubik+Moonrocks&family=Secular+One&display=swap');
+
+
+.containerNav{
+    display: flex;
+    background-color: #ffffffc4;
+    height: 110px;
+    font-weight: bolder;
+    box-shadow: 2px 3px 10px 0px #0000003d;
+}
+
+
+.logo{
+    font-family: 'Jost', sans-serif;
+    font-size: 40px;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 4px rgb(146, 9, 9);
+    color: rgb(146, 9, 9)!important;
+}
+
+.container a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;   
+}
+
+.btn-primary{
+    background-color: transparent !important;
+    border: none;
+    color: rgb(146, 9, 9)!important;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    transition: all ease-in 0.4s;
+}
+
+.btn-primary:hover{
+
+    color: rgb(0, 0, 0) !important;
+    font-size: 18px;
+
+}
+
+
 #responsive-navbar-nav{
     display: flex;
     justify-content:center;

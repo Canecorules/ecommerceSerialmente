@@ -17,6 +17,3 @@ function ItemList({productosFetch}) {
   );
 }
 export default ItemList;
-
-
-  

@@ -1,4 +1,4 @@
-import { BsBag } from "react-icons/bs";
+import {CgShoppingBag} from "react-icons/cg";
 import "./CartWidget.css";
 // eslint-disable-next-line no-unused-vars
 import { useContext, useState } from "react";
@@ -15,7 +15,7 @@ function CartWidget(){
     return(
 
     <li className="cart">
-        <BsBag size={23} />
+        <CgShoppingBag size={30} />
         {cantidadTotal() !== 0 && cantidadTotal() }
     </li>  
 

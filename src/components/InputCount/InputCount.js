@@ -5,26 +5,27 @@ import "./InputCount.css"
 
 function InputCount() {
   return (
+    <div>
 
-    <div className="containerChangeButton w-75 m-auto justify-content-between mt-5">
-    <Link to= "/carrito">
+<div className="containerInputCount w-75 m-auto  mt-5">
 
-    <button className="botonesOpciones">
-        Terminar compra!
-    </button>
+<Link to= "/carrito">
+<button className="inputCount">
+    FINALIZAR COMPRA
+</button>
+</Link>
 
-    </Link>
+<Link to= "/tienda">
+<button className="inputCount">
+    SEGUIR COMPRA
+</button>
+</Link>
 
+</div>
 
-    <Link to= "/tienda">
-
-    <button className="botonesOpciones" >
-        Seguir comprando!
-    </button>
-
-    </Link>
-    
     </div>
+
+  
 
   )
 }

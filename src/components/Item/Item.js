@@ -11,8 +11,8 @@ return (
 <Card.Img className="imagenCard" variant="top" src={producto.img}/>
 <Card.Body className ="bodyCard">
     <Card.Title className="tituloCard">{producto.nombre}</Card.Title>
-    <Card.Text className= "valorPrecio">{producto.precio}</Card.Text>
-    <Link className="buttonDetail" to={`/detalle/${producto.id}`}>DETALLES</Link>    
+    <Card.Text className= "valorPrecio text-center">Valor: {producto.precio}</Card.Text>
+    <Link className="buttonDetail" to={`/detalle/${producto.id}`}>VER MÁS</Link>    
 </Card.Body>
 </Card>
 )

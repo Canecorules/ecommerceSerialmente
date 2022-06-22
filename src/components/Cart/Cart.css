@@ -1,103 +1,27 @@
-.containerChangeButton {
-    display: flex;
-}
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Jost:wght@300&family=Questrial&family=Rubik+Moonrocks&family=Secular+One&display=swap');
 
 
-
-
-.botonesOpciones {
-    display: inline-block;
-    padding: 10px 10px;
-    border: 1px solid black;
-    border-radius: 4px;
-    transition: all 0.2s ease-in;
-    position: relative;
-    overflow: hidden;
-    font-size: 14px;
-    color: black;
-    z-index: 1;
-    font-family: 'Questrial', sans-serif;
-    letter-spacing: 2px;
-    font-weight: bold;
-    background-color: transparent;
-
-
-}
-
-.botonesOpciones:before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) scaleY(1) scaleX(1.25);
-    top: 100%;
-    width: 140%;
-    height: 180%;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 50%;
-    display: block;
-    transition: all 0.8s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-    z-index: -1;
-}
-
-.botonesOpciones:after {
-    content: "";
-    position: absolute;
-    left: 55%;
-    transform: translateX(-50%) scaleY(1) scaleX(1.45);
-    top: 180%;
-    width: 160%;
-    height: 190%;
-    background-color: #000000;
-    border-radius: 50%;
-    display: block;
-    transition: all 1s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-    z-index: -1;
-}
-
-.botonesOpciones:hover {
-    color: #ffffff;
-    font-weight: 400;
-
-    /* border: 1px solid #39bda7; */
-}
-
-.botonesOpciones:hover:before {
-    top: -35%;
-    background-color: #000000;
-    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-}
-
-.botonesOpciones:hover:after {
-    top: -45%;
-    background-color: #070707;
-    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-}
 
 .imgCart {
     width: 100px;
     height: auto;
 }
 
-
-
 .contenedorCart {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
     width: 100%;
     height: 100%;
     margin-top: 35px;
-    justify-content: space-evenly;
-    font-family: 'Questrial', sans-serif;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Jost', sans-serif;
     font-weight: bold;
-    /* background-color: darkolivegreen; */
-
 }
 
-
-
 .contenedorProductosCart {
-    width: 50%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,66 +31,38 @@
     font-size: 14px;
 }
 
+.footerCart{
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
 
+.containerBotonVaciarCarrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 30%;
+
+}
+
+.total{
+    margin: 0;
+}
 
 .botonVaciarCarrito {
     display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    align-content: center;
     background-color: transparent;
-    border-radius: 7px;
-    padding: 10px;
-    margin-bottom: 20px;
     font-weight: bold;
     letter-spacing: 1.5px;
     transition: ease-in-out 0.4s;
+    border: none;
+    text-decoration: underline;
 
 }
-
-.botonVaciarCarrito:hover {
-    letter-spacing: 4px;
-}
-
-.contenedorResumenFormulario {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-}
-
-
-.contenedorResumenCompra {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-
-}
-
-.tituloDetalleCompra p {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0;
-}
-
-
-
-.detalleCompra {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    /* background-color: coral; */
-}
-
-
-
-
-.spacing {
-    letter-spacing: 1.5px;
-    margin: 0;
-}
-
-
 
 .contenedorCarritoVacio1 {
     display: flex;
@@ -175,8 +71,6 @@
     flex-direction: column;
     width: 100%;
     height: 500px;
-    background-color: rgb(8, 8, 8);
-
 }
 
 
@@ -185,212 +79,62 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(8, 8, 8);
-
-
+    width: 70%;
+    height: 80%;
+    background-color: rgb(184, 169, 141);
+    border-radius: 5px;
 }
 
 
 .textoCarritoVacio {
-
-    font-family: 'Questrial', sans-serif;
-    font-size: 17px;
-    letter-spacing: 4px;
-    color: white;
+    font-size: 35px;
+    letter-spacing: 2px;
     padding-bottom: 10px;
+    color: rgb(0, 0, 0);
 }
 
 
 
 .botonCartIrTienda {
-
     background-color: transparent;
-    border: white solid 1.5px;
-    border-radius: 7px;
+    text-decoration: underline;
+    border: none;
     padding: 10px;
     margin-bottom: 20px;
-    text-decoration: none;
-    color: white;
-    font-family: 'Questrial', sans-serif;
-    letter-spacing: 2px;
-
-
-
-}
-
-.animate__animated {
-    color: white;
+    letter-spacing: 2px
 }
 
 
-
-/* From uiverse.io */
 .botonEliminar {
-    width: 150px;
+    width: 50px;
     height: 40px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    background: black;
+    justify-content: center;
+    color: rgb(146, 9, 9);
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 20px;
     border: none;
     border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-    background: black;
 }
 
-.botonEliminar,
-.botonEliminar span {
-    transition: 200ms;
-}
 
-.botonEliminar .text {
-    transform: translateX(35px);
-    color: white;
-    font-size: 14px;
-}
-
-.botonEliminar .icon {
-    position: absolute;
-    border-left: 1px solid black;
-    transform: translateX(110px);
-    height: 40px;
-    width: 40px;
+.containerButtonFinish {
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-.botonEliminar svg {
-    width: 15px;
-    fill: #eee;
-}
-
-.botonEliminar:hover {
-    background: black;
-}
-
-.botonEliminar:hover .text {
-    color: transparent;
-}
-
-.botonEliminar:hover .icon {
-    width: 150px;
-    border-left: none;
-    transform: translateX(0);
-}
-
-.botonEliminar:focus {
-    outline: none;
-}
-
-.botonEliminar:active .icon svg {
-    transform: scale(0.8);
+.buttonFinish {
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 4px;
 }
 
 
-@media screen and (max-width: 1010px) {
-
-    .contenedorCart {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        height: 100%;
-        margin-top: 35px;
-        justify-content: space-evenly;
-        font-family: 'Questrial', sans-serif;
-        font-weight: bold;
-
-    }
-
-    .contenedorProductosCart {
-        width: 100%;
-
-    }
-
-    .contenedorResumenFormulario {
-
-        width: 100%;
-    }
-
-    .contenedorResumenFormulario .tituloDetalleCompra {
-
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    .contenedorResumenFormulario .textOrder {
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        padding: 15px;
-        font-size: 17px;
-    }
-
-  
-
-}
-
-@media screen and (max-width: 768px){
-
-    .botonEliminar {
-        width: 2.4em;
-        margin: 0;
-    }
-
-    .botonEliminar .text {
-        display: none;
-        margin: 0;
-    }
-
-    .botonEliminar .icon {
-      display: none;
-
-    } 
-
-    .tableMediaQuery{
-        background-color: darkorange;
-        font-size: 13px;
-
-    }
-
-    .titulosTabla {
-        font-size: 13px;
-
-    }
-
-}
-
-@media screen and (max-width: 440px){
-
-    .titulosTabla {
-        font-size: 10px;
-
-    }
-
-
-    .tableMediaQuery{
-        font-size: 10px;
-    }
-
-    .botonEliminar {
-        width: 2.9em;
-        height: 2.9em;
-        margin: 0;
-    }
-    
-}
-
-@media screen and (max-width: 360px){
-    
-
-    .tableMediaQuery{
-        font-size: 8px;
-    }
-
+.buttonFinish:hover{
+    background-color: rgb(146, 9, 9);
 
 }

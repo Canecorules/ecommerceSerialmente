@@ -1,8 +1,8 @@
 /* eslint-disable no-redeclare */
 /* eslint-disable jsx-a11y/alt-text */
+import { useContext, useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import InputCount from "../InputCount/InputCount";
-import { useContext, useState } from "react";
 import { CartContext } from "../../Context/CartContext";
 
 import { ToastContainer } from "react-toastify";

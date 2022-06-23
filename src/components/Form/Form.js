@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { CartContext } from "../../Context/CartContext";
-
 import { Button, Col, FormGroup, FormLabel, FormSelect, Row } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
+import { CartContext } from "../../Context/CartContext";
+
 import "./Form.css"
 
 

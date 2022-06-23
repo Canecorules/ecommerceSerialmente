@@ -4,7 +4,7 @@
     
     border: 2px solid transparent;
     padding: 20px;
-      margin: 0;
+    margin: 0;
 }
 
 .tituloCard {
@@ -42,8 +42,7 @@ a.buttonDetail {
     border-radius: 4px;
 }
 
-a.buttonDetail:hover{
-   
+a.buttonDetail:hover{   
     background-color: #7a7a7c;
     font-weight: bold;
     color: black;

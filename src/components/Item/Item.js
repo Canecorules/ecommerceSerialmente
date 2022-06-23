@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom";
+
 import "./Item.css"
 import { Card } from "react-bootstrap"
-// import ItemCount from "../ItemCount/ItemCount"
-import { Link } from "react-router-dom";
 
 function Item({producto}) {
     

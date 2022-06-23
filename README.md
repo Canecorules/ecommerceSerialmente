@@ -1,31 +1,47 @@
-ZETAELE ART-BOOKS es una app creada por Zoe Lanz que simula un e-commerce de libros de arte de la marca taschen. Proyecto creado con fines educativos para el curso de REACT JS de coder house.
-PREVIEW
-preview
+    SERIALMENTE
 
-INICIO
-Portada de presentacion para entrar al "e-commerce".
-PÁGINA
-La página agrupa los productos en base a las siguientes categorías:
-▸ MODA
-▸FOTOGRAFÍA
-▸ARTE
-▸ARQUITECTURA & DISEÑO
-CARRITO
-El carrito cuenta con un icono que pertenece al carrito donde se agrupan los libros seleccionados para "comprar". Allí mismo se ven los detalles de cada libro elegido: imagen, nombre, precio, cantidad. Permite eliminar por producto o vaciar el carrito.Tambien incluye un detalle de compra donde se puede observar la cantidad total de libros seleccionados y el precio total a "pagar".
-FORMULARIO:
+Es una aplicación que presenta un e-commerce correspondiente al trabajo que realiza un escrito de obras correspondiente a asesinos seriales junto con su merchandising.
+
+    Video
+
+<img wid src="src/video/serialmente.gif" alt="preview" width="600"></img>
+
+
+    PÁGINA
+
+La página se carga inicialmente con todos los productos que  se encuentran disponibles para la compra, dentro del nav se encuentran el nombre del e-commerce que dirige a la pagina inicial, de igual manera se encuentran las 3 categorías de la siguiente manera:
+
+Libros
+Historietas
+Artículos
+
+    DETALLE ARTÍCULO
+
+En la vista de detalle del artículo se puede observar el nombre del artículo junto con el stock disponible, su valor, el numero de items que se quieren comprar y el botn de agregar el carrito que al momento de oprimirse ejecuta un alert toastify y libera dos botones loscuales permiten ir al carrito para finalizar la compra o seguir comprando.
+
+    CARRITO
+
+Se agrupan los ítems a comprar (foto, nombre, cantidad y precio total), permitiendo eliminar de a uno o todos los ítems del carrito. Por último, total a pagar.
+
+
+    FORMULARIO
+
 Luego de clickear en finalizar compra se abrira un formulario donde el usuario tendra que completar sus datos. Si estos estan todos correctos se enviara la orden de compra. El carrito es persistente y al "comprar" va disminuyendo el stock disponible.
-LIBRERÍAS
-▸ ANIMATE CSS > ^4.1.1: Libreria utilizada para animar el cart cuando esta vacío.
-▸ REACT-BOOTSTRAP > ^2.3.1: Bootstrap es un framework de CSS y JS utilizado para la maquetacion web.
-▸ FIREBASE > ^9.8.1:Firebase es un servicio de base de datos en la nube de Google y lo utilice para guardar los productos y ordenes de compra.
-▸ REACT-ICONS > ^4.3.1: Es una libreria de iconos. Utilizada en el cartWidget y en el cart.
-▸ REACT-ROUTER-DOM > ^6.3.0: Librería que facilita la navegacion, utilizada para generar un correcto flow de navegación.
-▸ REACT-TOASTIFY > ^9.0.4: Librería para la creacion y diseño de alertas. Utilizada en el cart al finalizar la "compra".
-FOOTER
-PODRÁN ENCONTRAR UN BOTON QUE LLEVA DIRECTO A GITHUB, LINKEDIN Y MAIL.
-DEPLOY
-https://zetaele-art-books.netlify.app/
 
-CONTACTO
-▸GITHUB
-▸LINKEDIN
+
+    TECNOLOGIAS Y LIBRERIAS UTILIZADAS EN EL PROYECTO
+
+* html5 
+* css3 
+* javascript 
+* react 
+* nodejs 
+* firebase 
+* git
+
+▸ REACT-BOOTSTRAP 
+▸ REACT-DOM 
+▸ REACT-TOASTIFY 
+
+    DEPLOY
+

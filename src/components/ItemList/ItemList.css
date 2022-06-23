@@ -1,15 +1,13 @@
 .contenedorTodasLasCards{
     display: grid;
-    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-columns: repeat(auto-fit, 400px);
     justify-content: space-evenly;
-    margin: 0;
+    gap: 10px;
     margin-top: 20px;
-
 
 }
 
-.containerCard{
-    /* background-color: blue; */
+.containerCard{   
     display: flex;
     justify-content: center;
 }

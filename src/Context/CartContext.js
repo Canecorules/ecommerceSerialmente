@@ -1,11 +1,27 @@
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { createContext, useState } from "react";
 
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export const CartContext = createContext([]);
 
 function CartContextProvider({ children }) {  
-
+  
   const [cartList, setcartList] = useState([]);
+
+  function toastify(text, time) {
+    toast(text, {
+      position: "top-center",
+      autoClose: time,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      className: "toastify",
+    });
+  }
 
   function añadirAlCarrito(item) {
     const indice = cartList.findIndex((producto) => producto.id === item.id);
@@ -20,11 +36,11 @@ function CartContextProvider({ children }) {
     }
   }
 
-  function eliminarUnProducto(id){
+  function deleteProduct(id){
     setcartList(cartList.filter(prod=>prod.id !== id))
   }
  
-  function vaciarCarrito() {
+  function cartEmpty() {
     setcartList([]);
   }
 
@@ -34,7 +50,7 @@ function CartContextProvider({ children }) {
 
   }
 
-  function precioTotal(){
+  function totalPrice(){
 
     return cartList.reduce((contador,producto)=>contador + (producto.quantity*producto.precio),0)
   } 
@@ -75,7 +91,7 @@ function CartContextProvider({ children }) {
           email: inputEmail,
         };
 
-        order.total= precioTotal();
+        order.total= totalPrice();
     order.productos = 
     cartList.map
     ((cartProduct) => {
@@ -89,23 +105,22 @@ function CartContextProvider({ children }) {
     const db = getFirestore();
     const queryCollection = collection(db, "Orden de compra");
     addDoc(queryCollection, order)
-      .then((resp) => console.log(resp))
+      .then((resp) => toastify(`Orden Exitosa, codigo de compra: ${resp.id}`, 10000))
       .catch((err) => console.log(err))
-      .finally(() =>{
-        vaciarCarrito()        
-        alert("Compra Realizada")
+      .finally(() =>{        
+        cartEmpty()        
       } ); 
       }
-
     } 
     else {
-      alert("Revise su informacion");
+      toastify('Revise su información', 3000);
     }
   }
 
   return (
-    <div>
-      <CartContext.Provider value={{ cartList, añadirAlCarrito, vaciarCarrito, eliminarUnProducto,cantidadTotal,precioTotal, purchaseOrder }}>
+    <div>  
+      <ToastContainer/>   
+      <CartContext.Provider value={{ cartList, añadirAlCarrito, cartEmpty, deleteProduct,cantidadTotal,totalPrice, purchaseOrder, toastify }}>
         {children}
       </CartContext.Provider>
     </div>

@@ -1,21 +1,19 @@
-
 import { useContext} from "react";
 import { CartContext } from "../../Context/CartContext";
 import { NavLink } from "react-router-dom"
-
-
+import Formulario from "../Form/Form";
 
 import "./Cart.css";
-import Formulario from "../Form/Form";
+import { ToastContainer } from "react-toastify";
 
 
 function Cart() {
 
   const {
     cartList,
-    vaciarCarrito,
-    eliminarUnProducto,
-    precioTotal,
+    cartEmpty,
+    deleteProduct,
+    totalPrice,    
   } = useContext(CartContext);    
 
   return cartList.length ? (
@@ -24,7 +22,6 @@ function Cart() {
         <div>
           <table className="table tableMediaQuery">
             <thead className="titulosTabla">
-
               <tr>
                 <th scope="col">PORTADA</th>
                 <th scope="col">TÍTULO</th>
@@ -32,9 +29,7 @@ function Cart() {
                 <th scope="col">CANTIDAD</th>
                 <th scope="col">ELIMINAR</th>
               </tr>
-
-            </thead>
-            
+            </thead>            
             <tbody className="tableBody">
               {cartList.map((producto) => (
                 <tr key={producto.id}>
@@ -43,12 +38,11 @@ function Cart() {
                   </th>
                   <td>{producto.nombre}</td>
                   <td>${producto.precio}</td>
-                  <td>{producto.quantity}</td>
-                 
+                  <td>{producto.quantity}</td>                 
                   <td>
                     <button
                       class="noselect botonEliminar"
-                      onClick={() => eliminarUnProducto(producto.id)}
+                      onClick={() => deleteProduct(producto.id)}
                     > X                    
                     </button>
                   </td>
@@ -57,20 +51,17 @@ function Cart() {
             </tbody>
           </table>
         </div>
-
         <div className="footerCart">
-
         <div className="containerBotonVaciarCarrito">
           <button
             className="botonVaciarCarrito"
-            onClick={vaciarCarrito}
-          >
-           VACIAR CARRITO
+            onClick={cartEmpty}>
+             VACIAR CARRITO
           </button>
-
           </div>
-          <p className="total"> TOTAL: ${precioTotal() !== 0 && precioTotal()}</p>
+          <p className="total"> TOTAL: ${totalPrice() !== 0 && totalPrice()}</p>
         </div>
+      <ToastContainer/> 
       <Formulario/>
       </div>
     </div>

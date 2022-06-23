@@ -11,6 +11,7 @@ function Formulario() {
   const { purchaseOrder } = useContext(CartContext);
 
   return (
+    
     <Form className="form">
       <Row className="inputName">
         <Col>
@@ -48,12 +49,12 @@ function Formulario() {
       </Row>
 
       <FormGroup className="input" controlId="formGridAddress">
-        <FormLabel>Dirección</FormLabel>
-        <input className="input" id="address" placeholder="San Juan 1234" />
+        <FormLabel></FormLabel>
+        <input className="input" id="address" placeholder="Ingrese su dirección" />
       </FormGroup>
 
       <FormGroup className="input" controlId="cellPhone">
-        <FormLabel>Celular</FormLabel>
+        <FormLabel></FormLabel>
         <input
           className="input"
           id="cellPhone"
@@ -89,6 +90,7 @@ function Formulario() {
         Generar Orden
       </Button>
     </Form>
+  
   );
 }
 

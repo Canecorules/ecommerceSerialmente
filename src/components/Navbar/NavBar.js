@@ -2,14 +2,12 @@ import Container from "react-bootstrap/Container"
 import Navbar from "react-bootstrap/Navbar"
 import Button from "react-bootstrap/Button"
 import CartWidget from "../CartWidget/CartWidget"
-
-import "./NavBar.css"
 import { Link } from "react-router-dom"
 // eslint-disable-next-line no-unused-vars
 import { useContext, useState } from "react";
 import { CartContext } from "../../Context/CartContext";
 
-
+import "./NavBar.css"
 
 
 function NavBar(){
